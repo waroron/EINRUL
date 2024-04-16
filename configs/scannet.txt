@@ -3,8 +3,8 @@ min_trans = 0.15
 pseudo_lidar_point = 15000
 
 exp_name = scene0000_00
-data_path = ~/data/scannet
-scene_path = ~/scene/scannet
+data_path = /home/yukiya/project/EINRUL/data/scannet
+scene_path = /home/yukiya/project/EINRUL/scene/scannet
 data_type = scannet
 device = cuda:0
 
@@ -19,7 +19,7 @@ map_lr = 1e-3
 pose_lr = 1e-3
 # pose_lr = 0
 
-sample_rays = 100
+sample_rays = 80
 ray_points = 32
 variance = 0.3
 normal_eps = 0.005
