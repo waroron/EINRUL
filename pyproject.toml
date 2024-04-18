@@ -15,6 +15,8 @@ dependencies = [
     "opencv-python>=4.9.0.80",
     "opencv-contrib-python>=4.9.0.80",
     "pymcubes>=0.1.4",
+    "pyopengl>=3.1.7",
+    "pangolin-tool>=0.0.1",
 ]
 readme = "README.md"
 requires-python = ">= 3.11"
