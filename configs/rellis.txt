@@ -2,8 +2,8 @@ min_ang = 20.0
 min_trans = 0.15
 # min_trans = 0.20
 
-exp_name = odom_xyziPoints_20200213_trail_2
-data_path = /data/bag_files/rellis-3d/einrul
+exp_name = 0
+data_path = /data/dataset/rellis-3d/EINRUL
 scene_path = ~/project/EINRUL/scene/rellis-3d
 data_type = self-collected
 device = cuda:0
@@ -19,7 +19,7 @@ map_lr = 1e-3
 pose_lr = 1e-3
 # pose_lr = 1.5e-3
 
-sample_rays = 50
+sample_rays = 30
 ray_points = 32
 variance = 0.3
 normal_eps = 0.005

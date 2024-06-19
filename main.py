@@ -16,7 +16,7 @@ def main():
         torch.autograd.set_detect_anomaly(True)
     
     if args.finetune:
-        coarse_poses = misc.load_final_poses(args)
+        coarse_poses = misc.load_final_poses(arg23s)
     
     key_frame_info = misc.load_keyframe_info(args)
     

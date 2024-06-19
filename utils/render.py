@@ -76,13 +76,13 @@ def render_rays(rays, gt_depths, nerf_model, ray_points, variance, weight_coe, s
     
     if stratified is not None and int(ray_points * stratified) != 0:
         # uniform random sampling
-        t_vals = torch.linspace(0., 1., steps = int(ray_points * stratified)).cuda()
+        t_vals = torch.linspace(0., 1., steps = int(ray_points * stratified)).to(device)
         dist_strat = -3 * variance * (1.-t_vals) + 3 * variance * (t_vals)
         dist_strat = dist_strat.expand([sample_rays, -1])
         mids = .5 * (dist_strat[...,1:] + dist_strat[...,:-1])
-        upper = torch.cat([mids, dist_strat[...,-1:]], -1)
-        lower = torch.cat([dist_strat[...,:1], mids], -1)
-        t_rand = torch.rand(dist_strat.shape).cuda()
+        upper = torch.cat([mids, dist_strat[...,-1:]], -1).to(device)
+        lower = torch.cat([dist_strat[...,:1], mids], -1).to(device)
+        t_rand = torch.rand(dist_strat.shape).to(device)
         dist_strat = lower + (upper - lower) * t_rand        
         dist = torch.cat([dist, dist_strat], -1)
     
